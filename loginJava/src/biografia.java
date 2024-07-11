@@ -36,14 +36,17 @@ public class biografia {
         cerrarSesiónButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
+                JFrame biogra = new JFrame();
+                biogra.dispose();
                 new login();
             }
         });
         hobbiesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                openHobbies();
+                frame.setVisible(false);
+
+                new hobbies();
             }
         });
     }
@@ -51,15 +54,4 @@ public class biografia {
     public JPanel BIOGRAFIA() {
         return biografia;
     }
-
-    private void openHobbies() {
-        JFrame hobbiesFrame = new JFrame("Hobbies");
-        hobbiesFrame.setContentPane(new hobbies().HOBBIES());
-        hobbiesFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        hobbiesFrame.pack();
-        hobbiesFrame.setSize(600, 600);
-        hobbiesFrame.setLocationRelativeTo(null);
-        hobbiesFrame.setVisible(true);
-    }
-
 }

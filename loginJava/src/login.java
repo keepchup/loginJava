@@ -34,8 +34,8 @@ public class login {
             public void actionPerformed(ActionEvent e) {
                 if (user.getText().equals("admin") && password.getText().equals("admin")) {
                     coment.setText("Conectado");
-                    login.setVisible(false);
                     JFrame login = new JFrame();
+                    login.setVisible(false);
                     new biografia();
                 } else {
                     coment.setText("Usuario o contraseña incorrecto");
