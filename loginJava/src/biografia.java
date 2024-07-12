@@ -20,6 +20,7 @@ public class biografia {
         frame.setSize(600, 600);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+
         user2.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
@@ -36,8 +37,7 @@ public class biografia {
         cerrarSesiónButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame biogra = new JFrame();
-                biogra.dispose();
+                frame.setVisible(false);
                 new login();
             }
         });
@@ -45,7 +45,6 @@ public class biografia {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-
                 new hobbies();
             }
         });
